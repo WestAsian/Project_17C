@@ -27,25 +27,7 @@ using namespace std;
 #define TURN 2
 #define TEST -1
 
-void display_intro(string filename)
-{
-	string line; 
-	fstream myfile; 
-	myfile.open(filename.c_str());
-	if (myfile.is_open())
-	{
-		while( getline(myfile, line)) 
-		{
-			cout << line << endl; 
-		}
-		myfile.close(); 
-	}
-	else
-	{
-		cout << "error unable to open file " << endl; 
-	}
 
-}
 
 void confirm_turn (int x)
 {
@@ -75,7 +57,6 @@ COLOR FromString (const string & str)
 int main()
 { 
 	system("clear"); 
-	display_intro(TEXTFILE); 
 	int amount_players; 
 	int flag = 0; 
 	while (flag == 0 ) 
